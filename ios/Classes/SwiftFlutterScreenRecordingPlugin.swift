@@ -175,7 +175,7 @@ var myResult: FlutterResult?
                     print("Failed to save ")
                     return
                 }
-                print(self.outputURL)
+                print(outputURL)
             }
 //             recorder.stopCapture( handler: { (error) in
 //                 print("Stopping recording...");
