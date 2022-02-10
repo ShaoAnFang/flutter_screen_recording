@@ -185,9 +185,9 @@ var myResult: FlutterResult?
         self.videoWriter?.finishWriting {
             print("Finished writing video");
             //Now save the video
-            PHPhotoLibrary.shared().performChanges({
-                PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: self.videoOutputURL!)
-            })
+            //PHPhotoLibrary.shared().performChanges({
+            //    PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: self.videoOutputURL!)
+            //})
         }
     
 }
