@@ -170,9 +170,17 @@ var myResult: FlutterResult?
     @objc func stopRecording() {
         //Stop Recording the screen
         if #available(iOS 11.0, *) {
-            recorder.stopCapture( handler: { (error) in
-                print("Stopping recording...");
-            })
+             recorder.stopRecording(withOutput: outputURL) { (error) in
+                guard error == nil else{
+                    print("Failed to save ")
+                    return
+                }
+                print(self.outputURL)
+            }
+//             recorder.stopCapture( handler: { (error) in
+//                 print("Stopping recording...");
+//             })
+            
         } else {
           //  Fallback on earlier versions
         }
